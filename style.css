@@ -1,0 +1,223 @@
+:root {
+    /* ### Primary */
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+  
+    /* ### Neutral */
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Spartan", sans-serif;
+    font-size: 15px;
+    margin: 75px auto;
+    width: 88%;
+    text-align: center;
+    background-image: url("./images/bg-pattern-top-mobile.svg"),
+      url("./images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+  }
+  
+  /* intro */
+  
+  .intro h1 {
+    font-size: 2em;
+    width: 80%;
+    margin: auto;
+    padding: 10px 0;
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+  }
+  
+  .intro p {
+    font-size: 0.9em;
+    line-height: 1.5em;
+    color: var(--Dark-Grayish-Magenta);
+    font-weight: 500;
+  }
+  
+  /* rating */
+  
+  .rating {
+    margin-top: 30px;
+  }
+  
+  .rating article {
+    background: var(--Light-Grayish-Magenta);
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: var(--Very-Dark-Magenta);
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  .rating img {
+    margin: 3px;
+  }
+  
+  .rating article p {
+    margin-top: 6px;
+    margin-bottom: 0;
+  }
+  
+  /* card */
+  
+  .card {
+    margin: 45px 0;
+    text-align: left;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    display: grid;
+    grid-gap: 20px;
+    justify-content: center;
+  }
+  
+  .card article {
+    background: var(--Very-Dark-Magenta);
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 500px;
+  }
+  
+  .card .info {
+    height: 37px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+  }
+  
+  .card .info img {
+    width: 37px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 25px;
+    position: absolute;
+  }
+  
+  .card .info p:nth-of-type(1) {
+    color: var(--Light-Grayish-Magenta);
+    font-weight: 700;
+  }
+  
+  .card .info p:nth-of-type(2) {
+    color: var(--Soft-Pink);
+  }
+  
+  .card .info > p {
+    margin: 0 60px;
+  }
+  
+  .card article > p {
+    margin: 30px auto 0;
+    color: var(--Light-Grayish-Magenta);
+    line-height: 1.8em;
+  }
+  
+  /* attribution */
+  
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+  
+  @media screen and (min-width: 375px) {
+    body {
+      background-image: url("./images/bg-pattern-top-desktop.svg"),
+        url("./images/bg-pattern-bottom-desktop.svg");
+      background-repeat: no-repeat;
+      background-position: top left, bottom right;
+    }
+  
+    .intro {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media screen and (min-width: 1440px) {
+    body {
+      width: 1152px;
+      margin: 120px auto;
+      background-image: url("./images/bg-pattern-top-desktop.svg"),
+        url("./images/bg-pattern-bottom-desktop.svg");
+      background-repeat: no-repeat;
+      background-position: top -15px left, bottom right;
+    }
+  
+    /* heading */
+  
+    .heading {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+    }
+  
+    /* intro */
+  
+    .intro {
+      text-align: left;
+      width: 80%;
+    }
+  
+    .intro h1 {
+      width: 100%;
+      margin-left: 0;
+      font-size: 3em;
+    }
+  
+    .intro p {
+      font-size: 1em;
+    }
+  
+    /* rating */
+  
+    .rating article {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      font-size: 0.9em;
+      max-width: 450px;
+      padding: 15px;
+    }
+  
+    .rating article:nth-child(1) {
+      margin-left: 0px;
+    }
+  
+    .rating article:nth-child(3) {
+      margin-right: 0px;
+    }
+  
+    /* card */
+  
+    .card {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 35px;
+    }
+  
+    .card article {
+      margin: auto;
+    }
+  
+    .card article:nth-child(2) {
+      margin: 20px auto -20px;
+    }
+  
+    .card article:nth-child(3) {
+      margin: 40px auto -40px;
+    }
+  }
+  
